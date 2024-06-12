@@ -98,21 +98,6 @@ export function Sendbar({ channelId }: { channelId: string }) {
               control={form.control}
               onSignal={() => {
                 void utils.client.chat.type.mutate({ channelId });
-                /* Experimental typing signal
-                const profile = utils.account.get.getData();
-                if (!profile) return;
-
-                void ably.channels.get(`chat:${channelId}:typing`).publish({
-                  data: {
-                    channelId,
-                    user: {
-                      id: profile.id,
-                      name: profile.name,
-                      image: profile.image,
-                    },
-                  },
-                });
-                 */
               }}
               onPaste={(e) => {
                 if (e.clipboardData.files.length > 0) {
