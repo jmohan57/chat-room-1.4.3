@@ -74,7 +74,6 @@ function MemberItem({ member }: { member: Serialize<MemberWithUser> }) {
   const canUpdate = isOwner && member.user_id !== session?.user.id;
 
   const canKick =
-    // Owner
     (isOwner && member.user_id !== session?.user.id) ||
     // Admin
     (ctx.member.admin && !member.admin && member.user_id !== ctx.owner_id);
