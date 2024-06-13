@@ -96,7 +96,7 @@ export function useItems(
       }
 
       items.push({
-        id: `pending:${message.nonce}`,
+        id: `pending: ${message.nonce}`,
         type: "pending",
         message,
         chainStart: !isChain,
