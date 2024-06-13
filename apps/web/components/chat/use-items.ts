@@ -85,7 +85,6 @@ export function useItems(
       const authorId = session.user.id;
       const time = Date.now();
       const isChain =
-        // automatically chain with pending messages
         prev?.type === "pending" ||
         (prev?.type === "message" &&
           message.reply == null &&
